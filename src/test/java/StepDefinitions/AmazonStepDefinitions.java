@@ -47,10 +47,11 @@ public class AmazonStepDefinitions {
     }
 
     @When("Add to Cart")
-    public void addToCart() {
+    public void addToCart() { AmazonPages.addToCard();
+
     }
 
     @When("Check at cart page")
-    public void checkAtCartPage() {
+    public void checkAtCartPage() { AmazonPages.checkAtCartPage();
     }
 }

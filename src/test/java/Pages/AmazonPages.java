@@ -13,8 +13,9 @@ public class AmazonPages {
     static By searchButton =By.id("nav-search-submit-button");
     static  By filterForShippedByAmazon=By.cssSelector("span[class='s-navigation-icon-text aok-relative'] span[class='a-size-base a-color-base']");
     static  By appleFilter=By.xpath("//span[@class='a-size-base a-color-base'][normalize-space()='Apple']");
-    static  By firstProduct =By.cssSelector("img[alt='Apple AirPods Max - Gümüş Rengi']");
+    static  By firstProduct =By.cssSelector("img[alt='Apple AirPods (2.Nesil) ve Kablolu Şarj Kutusu']");
     static  By add =By.id("add-to-cart-button");
+    static By cart =By.cssSelector(".nav-cart-icon.nav-sprite");
     public  AmazonPages (WebDriver driver) {
         this.driver=driver;
         this.wait=new WebDriverWait(driver,10);
@@ -47,6 +48,15 @@ public class AmazonPages {
 
     public static void clickTheFirstProduct() {
         elementHelper.click(firstProduct);
+    }
+
+    public static void addToCard() {
+        elementHelper.click(add);
+        elementHelper.click(cart);
+    }
+
+    public static void checkAtCartPage() {
+
     }
 
 
